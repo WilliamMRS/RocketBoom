@@ -1,25 +1,20 @@
-#include<iostream>
-#include <SFML/Graphics.hpp>
+#include "std_lib_facilities.h"
+#include <FL/Fl.H>
+#include <FL/Fl_Window.H>
+#include <FL/Fl_Box.H>
+#include "keyPressed.h"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+	bool spacePressed = false;
+	while (not spacePressed)
+	{
+		if(abs(keyPressed()) == 1){
+			cout << keyPressed() << endl;
+		} else if(keyPressed() == 2){
+			spacePressed = true;
+		}
+	}
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
-
-    return 0;
+	keep_window_open();
 }
