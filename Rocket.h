@@ -14,4 +14,6 @@ class Rocket{
         double getPosY();
         double getVelX();
         double getVelY();
+        void moveX();
+        void moveY();
 };

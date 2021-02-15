@@ -33,3 +33,9 @@ double Rocket::getVelX(){
 double Rocket::getVelY(){
     return velY;
 }
+void Rocket::moveX(){
+    posX += velX;
+}
+void Rocket::moveY(){
+    posY += velY;
+}
