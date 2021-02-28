@@ -1,4 +1,4 @@
-#include "physics.h"
+#include "physics.h";
 using namespace std;
 
 double PhysicsObjects::getPoint1()
